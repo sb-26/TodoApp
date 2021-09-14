@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <title><%= title %></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='/style.css'>
+</head>
+<body>
+  <div class="header">
+    <h1>Todo App</h1>
+  </div>
+  <hr>
+  <form action="/" method="POST">
+    <div class="desc">
+      <h3>Description</h3>
+      <input type="text" name="taskDesc" placeholder="What u need to do?" required>
+    </div>
+    <hr>
+    <div class="category-options">
+      <div class="category">
+        <h3>Category</h3>
+        <select name="taskCat">
+          <option value="cat">Choose a category</option>
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="school">School</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+      
+      <div class="date">
+        <h3>Due Date</h3>
+        <input type="date" name="taskDate" required>
+      </div>
+    </div>
+
+
+    <hr>
+
+    <div class="btn">
+      <button type="submit">+ Add Task</button>
+      <button>Delete Tasks</button>
+    </div>
+    <hr>
+  </form>
+
+  <% for(var i of task) { %>
+    <div class="task">
+        <div class="check-info"><input type="checkbox" class="check-box"></div>
+        <div class="task-info">
+          <h2 class="task-desc"><%=i.taskDesc%></h2>
+          <p><%=i.taskDate%></p>
+        </div>
+        <div class="cat-info-div">
+          <% if(i.taskCat!="cat") { %><h3 class="cat-info"><%= i.taskCat %></h3>
+          <% } %>
+        </div>
+    </div>
+    <% } %>
+
+  <script src="/home.js"></script>
+</body>
+</html>

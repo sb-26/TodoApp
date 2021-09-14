@@ -1,0 +1,71 @@
+*{
+  margin:0;
+  font-family: 'Quicksand', sans-serif;
+  color:#fc4d7e;
+}
+body{
+  background-color: #fcf8e6;
+}
+.header h1{
+  text-align: center;
+  margin: 20px;
+}
+.desc{
+  margin: 20px;
+}
+.desc input{
+  padding: 20px;
+  width:90%;
+  outline: none;
+  border: 0;
+  background: #fcf8e6;
+}
+.category-options{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.category{
+  margin-left: 20%;
+}
+.category option{
+  background: #FFADAD;
+  outline: #FFADAD;
+}
+.date{
+  margin-right: 20%;
+}
+.date input{
+  background: #FFADAD;
+}
+.btn{
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn button{
+  width:40%;
+  padding: 10px;
+  font-size: medium;
+  background: #FFADAD;
+  border-radius:5px;
+  border: 0;
+}
+.task{
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.task-info{
+  flex-basis: 60%;
+}
+.task div{
+  margin: 20px;
+}
+
+.cat-info-div{
+  padding:10px;
+  text-align: center;
+  width:80px;
+  border-radius: 5px;
+}
