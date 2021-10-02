@@ -10,7 +10,6 @@ const taskSchema = new mongoose.Schema({
   },
   taskDate:{
     type:Date,
-    required:true
   },
   
 });

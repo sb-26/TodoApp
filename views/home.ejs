@@ -48,7 +48,7 @@
       <hr>
   <% for(var i of task) { %>
     <div class="task">
-        <div class="check-info"><input type="checkbox" name="checkbox" onchange="this.form.submit" value="<%=i._id%>"></div>
+        <div class="check-info"><input type="checkbox" name="ischecked" onchange="this.form.submit" value="<%=i._id%>"></div>
         <div class="task-info">
           <h2 class="task-desc"><%=i.taskDesc%></h2>
           <p><%=i.taskDate%></p>

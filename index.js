@@ -33,7 +33,7 @@ app.post('/',function(req,res){
 });
 
 app.post('/delete',function(req,res){
-    var deleteItems = req.body.checkbox;
+    var deleteItems = req.body.ischecked;
     for(var i in deleteItems){
       Task.findByIdAndDelete(i,function(err){
         if(err){

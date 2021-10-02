@@ -3,7 +3,6 @@ const checkBox = document.getElementsByClassName("check-box");
 const taskDesc = document.getElementsByClassName("task-desc");
 const catInfo = document.getElementsByClassName("cat-info");
 const catInfoDiv = document.getElementsByClassName("cat-info-div");
-const btn = document.getElementById("delete-btn");
 
 for(let i=0;i<checkBox.length;i++){
   checkBox[i].addEventListener('click',function(){
