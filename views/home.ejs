@@ -14,7 +14,7 @@
   <form action="/" method="POST">
     <div class="desc">
       <h3>Description</h3>
-      <input type="text" name="taskDesc" placeholder="What u need to do?" required>
+      <input type="text" name="taskDesc" placeholder="What u need to do?" required autocomplete="off" >
     </div>
     <hr>
     <div class="category-options">
@@ -40,14 +40,15 @@
 
     <div class="btn">
       <button type="submit">+ Add Task</button>
-      <button>Delete Tasks</button>
     </div>
     <hr>
-  </form>
-
+    </form>
+    <form action="/delete" method="POST">
+      <div class="btn"> <button type="submit" id="delete-btn">Delete Tasks</button></div>
+      <hr>
   <% for(var i of task) { %>
     <div class="task">
-        <div class="check-info"><input type="checkbox" class="check-box"></div>
+        <div class="check-info"><input type="checkbox" name="checkbox" onchange="this.form.submit" value="<%=i._id%>"></div>
         <div class="task-info">
           <h2 class="task-desc"><%=i.taskDesc%></h2>
           <p><%=i.taskDate%></p>
@@ -58,7 +59,7 @@
         </div>
     </div>
     <% } %>
-
+    </form>
   <script src="/home.js"></script>
 </body>
 </html>

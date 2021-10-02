@@ -39,17 +39,16 @@ body{
   background: #FFADAD;
 }
 .btn{
-  margin: 20px;
-  display: flex;
-  justify-content: space-between;
+  margin: 20px 30%;
 }
 .btn button{
-  width:40%;
+  width:100%;
   padding: 10px;
   font-size: medium;
   background: #FFADAD;
   border-radius:5px;
   border: 0;
+  text-align: center;
 }
 .task{
   margin: 20px;

@@ -32,6 +32,18 @@ app.post('/',function(req,res){
   
 });
 
+app.post('/delete',function(req,res){
+    var deleteItems = req.body.checkbox;
+    for(var i in deleteItems){
+      Task.findByIdAndDelete(i,function(err){
+        if(err){
+          Task.findByIdAndDelete(deleteItems,function(err){});
+        }
+      });
+    }
+  res.redirect('back');
+});
+
 app.listen(port,function(){
   console.log('server is running');
 });
